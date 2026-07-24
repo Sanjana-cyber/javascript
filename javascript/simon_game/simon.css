@@ -1,0 +1,31 @@
+h1,h2{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+}
+.container{
+    display: flex;
+   justify-content: center;
+   text-align: center;
+}
+.btn{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-color: black;
+    border-radius: 20%;
+    margin: 2rem;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color:green;
+
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color:purple;
+}

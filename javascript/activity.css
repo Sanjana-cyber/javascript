@@ -1,0 +1,17 @@
+body
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+}
+
+div{
+    width: 500px;
+    height: 90px;
+    
+    border-color: black;
+
+    border-style: solid;
+    text-align: center;
+}

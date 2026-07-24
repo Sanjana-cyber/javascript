@@ -1,0 +1,11 @@
+setTimeout(
+    ()=>{
+        console.log("hell0")
+    },4000
+)
+setInterval(
+    ()=>{
+        console.log("world")
+    },4000
+);
+clearInterval();

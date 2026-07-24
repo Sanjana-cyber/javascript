@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <form action="/submit" method="post">
+
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label>
+        <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            value="sanjana"
+            placeholder="Enter your full name"
+            required
+        >
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required
+        >
+        <br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+        >
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">DOB:</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+        >
+        <br><br>
+
+        <!-- Gender -->
+        <p>Gender:</p>
+
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <br><br>
+
+        <!-- Skills -->
+        <p>Skills:</p>
+
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="skills" value="JavaScript">
+        <label for="js">JavaScript</label>
+
+        <br><br>
+
+        <!-- Country -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+        </select>
+
+        <br><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <br>
+        <textarea
+            id="address"
+            name="address"
+            rows="4"
+            cols="30"
+        ></textarea>
+
+        <br><br>
+
+        <!-- File Upload -->
+        <label for="resume">Resume:</label>
+        <input
+            type="file"
+            id="resume"
+            name="resume"
+        >
+
+        <br><br>
+
+        <!-- Submit & Reset -->
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
