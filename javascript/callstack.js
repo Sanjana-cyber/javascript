@@ -45,4 +45,4 @@ function changeColor2( color,delay,newChange){
 
 
 }
-changeColor2("red",1000,changeColor2("orange",2000,changeColor2("green",3000)))fgt
+changeColor2("red",1000,changeColor2("orange",2000,changeColor2("green",3000)))

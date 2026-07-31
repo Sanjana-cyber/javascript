@@ -15,7 +15,7 @@ function saveDatabase(data,success,failure)
 //callback hell 
 saveDatabase("sanjana",(data)=>{
     console.log("sucess  of data saving",data)
-    //fetching the second
+    //saving the second
     saveDatabase("khushi",(data)=>{
       console.log("sucess  of data saving",data)
       saveDatabase("simran",(data)=>{
@@ -82,7 +82,7 @@ console.log("failure  of data saving")
 
 
  }
-  console.log(promise());
+  console.log(promise2());
   
   promise2("")
   .then(()=>{
@@ -129,3 +129,7 @@ console.log("failure  of data saving")
   .catch(()=>{
    console.log("data is not saved") 
   })
+
+
+
+  
