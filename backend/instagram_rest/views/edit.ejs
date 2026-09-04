@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1> HERE YOU CAN CHANGE YOUR BIO AND PASSWORD FOR @ <%= show.username%></h1>
+    <form method="POST" action="http://localhost:3000/instagram/<%= show.username %>?_method=PUT">
+       
+
+        
+         <label for="password">password</label>
+        <input type="text " name="password" >
+        <br><br>
+         <label for="bio">bio</label>
+         <textarea name="bio" placeholder="enter ur bio "></textarea>
+        <br><br>
+      <button>submit</button>  
+    </form>
+</body>
+</html>

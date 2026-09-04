@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="/instagram.css">
+    <title>Main</title>
+</head>
+<body>
+ <h1> INSTAGRAM </h1> 
+ <% for(let i of instagram){%> 
+ <div>
+<h4>username :@ <%= i.username %></h4>
+<a href="http://localhost:3000/instagram/<%= i.username %>"> see detail information</a>
+<br>
+<a href="http://localhost:3000/instagram/<%= i.username %>/edit
+">Edit</a>
+
+<!-- <a href="http://localhost:3000/instagram/delete< %>/edit
+">delete</a> -->
+ </div> 
+<% } %>
+<br>
+<a href="http://localhost:3000/instagram/new"> create new post</a>
+</body>
+</html>

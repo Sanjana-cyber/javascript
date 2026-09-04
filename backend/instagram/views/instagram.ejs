@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+   <h1>INSTAGRAM</h1>
+    <h3>Your instagram username is @ <%=name.name%></h3>
+  <p> follower <%= name.followers %></p>
+  <p> followings <%= name.following%></p>
+  <% for (let post of name.posts) { %>
+
+    <img src="<%= post.image %>">
+    <p ><%= post.likes %> likes</p>
+   <P> <%= post.comments %></P>
+
+<% } %>
+<button id="follower">Follower</button>
+     <button>show posts</button>
+</body>
+<script>
+    const user = <%- JSON.stringify(name) %>;
+</script>
+
+<script src="/app.js"> </script>
+</html>

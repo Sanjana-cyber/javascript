@@ -12,8 +12,10 @@
         <div>
           <h3> @ <%= i.username %></h3>
          
-           <h4> <%=  i.comment %></h4>
-  <a href="http://localhost:3000/posts/<%= posts.id %>">See the detail</a>
+          
+  <a href="http://localhost:3000/posts/<%= i.id %>">See the detail</a>
+  <br>
+  <a  href="http://localhost:3000/posts/<%= i.id %>/edit">Edit</a>
         </div>
     <%} %>
 

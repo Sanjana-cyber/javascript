@@ -6,10 +6,15 @@
     <title>see detail</title>
 </head>
 <body>
-<% for(posts of posts){ %>
-    <div> <%= let info =posts.find(p)=> id== p.id %>
-   
-    </div>
-<%} %>
+
+      <div> 
+        <h2> Here is the detail information:</h2>
+       <h3><%=  info.id %></h3>
+       <h3><%=  info.username %></h3>
+       <h3><%=  info.comment %></h3>
+
+
+  </div>
+
 </body>
 </html>

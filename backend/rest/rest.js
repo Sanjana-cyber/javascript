@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const { v4: uuidv4 } = require('uuid');
 
-
+var methodOverride = require('method-override')
 let posts=[
     {
         id:uuidv4(),
@@ -19,6 +19,7 @@ let posts=[
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'))
 
 app.get("/posts",(req,res)=>{
     res.render("rest",{posts})
@@ -33,6 +34,7 @@ app.post("/posts",(req,res)=>{
    
     res.redirect("/posts")
     posts.push({
+        id:uuidv4(),
     username:username,
     comment:comment
 });
@@ -40,8 +42,28 @@ app.post("/posts",(req,res)=>{
 
 
 app.get("/posts/:id",(req,res)=>{
-    res.render("see.ejs",{posts})
+    let{id}=req.params;
+    console.log(id)
+    let info =posts.find((p)=>(p.id==id))
+     console.log("Found info:", info);
+
+    res.render("see",{info})
 });
+
+
+app.get("/posts/:id/edit",(req,res)=>{
+    let {id}=req.params;
+    let edit=posts.find((p)=>(p.id==id));
+    res.render("edit.ejs",{edit})
+})
+
+app.patch("/posts/:id",(req,res)=>{
+    let {id}=req.params;
+    let newContent=req.body.comment;
+    let update=posts.find((p)=>(p.id==id));
+    update.comment=newContent;
+   res.redirect("/posts");
+})
 
 let port=3000;
 app.listen(port);
